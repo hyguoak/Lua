@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+p{
+    font-family: 'Noto Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Noto Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.mw-container{
+    max-width: 1140px;
+}
+
+.bg-second{
+    background-color: var(--bs-blue-principal);
+    color: var(--bs-white);
+}
