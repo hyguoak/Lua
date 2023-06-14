@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrilhasController;
-use App\Models\Trilhas;
+use Illuminate\Support\Facades\Route;
+use App\Models\graduation;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +16,28 @@ use App\Models\Trilhas;
 |
 */
 
-Route::get('/', [Controller::class, 'show'])->name('welcome');
+Route::get('/', function () {
+    $graduations = graduation::where('id',1)->first();
+
+    return view('welcome', ['graduations' => $graduations]);
+    
+});
 
 Route::get('/trlhas', [TrilhasController::class,'show'])->name('trilhas.show');
 Route::get('/trilhas/sistemas', [TrilhasController::class, 'sistemas'])->name('trilhas.sistemas');
 Route::get('/trilhas/jogos', [TrilhasController::class, 'jogos'])->name('trilhas.jogos');
 Route::get('/trilhas/animacao', [TrilhasController::class, 'animacao'])->name('trilhas.animacao');
 Route::get('/trilhas/design', [TrilhasController::class, 'design'])->name('trilhas.design');
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

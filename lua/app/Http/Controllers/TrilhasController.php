@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\graduation;
+
 use App\Models\Trilhas;
 use Illuminate\Http\Request;
 

@@ -55,42 +55,31 @@
             As áreas são:
         </p>
         <div class="bg-second p-3 m-3">
-            <a href="{{route('trilhas.animacao')}}">
+            <a href="{{ route('trilhas.animacao') }}">
                 <h3>Animação e audiovisual</h3>
-                <p>As trilhas, chamadas também de intrinerários formativos, são áreas específicas, compostas por
-                    determinadas disciplinas optativas, ofertadas pelo próprio curso. Cada trilha possui um grupo de
-                    disciplnas que compoem a formação na área.
-                    As áreas são:
+                <p>Busca explorar os recursos tecnológicos, as ferramentas e os conhecimentos operacionais aplicados às
+                    áreas de produção artística, cultural e multimídia, para uso nas produções estudantis.
                 </p>
             </a>
         </div>
         <div class="bg-second p-3 m-3">
-            <a href="{{route('trilhas.design')}}">
+            <a href="{{ route('trilhas.design') }}">
                 <h3>Design Digital Interativo</h3>
-                <p>As trilhas, chamadas também de intrinerários formativos, são áreas específicas, compostas por
-                    determinadas disciplinas optativas, ofertadas pelo próprio curso. Cada trilha possui um grupo de
-                    disciplnas que compoem a formação na área.
-                    As áreas são:
+                <p>Busca estimular uma visão crítica do processo de design, e de suas funções (prática, estética e simbólica). Abrange a interatividade no design digital, e questões relativas a experiência do usuário. 
                 </p>
             </a>
         </div>
         <div class="bg-second p-3 m-3">
-            <a href="{{route('trilhas.jogos')}}">
+            <a href="{{ route('trilhas.jogos') }}">
                 <h3>Jogos Digitais</h3>
-                <p>As trilhas, chamadas também de intrinerários formativos, são áreas específicas, compostas por
-                    determinadas disciplinas optativas, ofertadas pelo próprio curso. Cada trilha possui um grupo de
-                    disciplnas que compoem a formação na área.
-                    As áreas são:
+                <p>Os componentes curriculares da trilha oferecem múltiplas perspectivas sobre a interatividade em multimídia digital, contemplando aspectos teóricos e práticos no desenvolvimento de jogos.
                 </p>
             </a>
         </div>
         <div class="bg-second p-3 m-3">
-            <a href="{{route('trilhas.sistemas')}}">
+            <a href="{{ route('trilhas.sistemas') }}">
                 <h3>Sistemas Multimídia</h3>
-                <p>As trilhas, chamadas também de intrinerários formativos, são áreas específicas, compostas por
-                    determinadas disciplinas optativas, ofertadas pelo próprio curso. Cada trilha possui um grupo de
-                    disciplnas que compoem a formação na área.
-                    As áreas são:
+                <p>Busca desenvolver nos discentes a capacidade de representar as informações nestes sistemas de forma múltipla, como por meio de imagens, vídeos e linguagem sonora, sejam elas integradas ou isoladas em mídias interativas. 
                 </p>
             </a>
         </div>

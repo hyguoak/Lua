@@ -13,7 +13,8 @@ class Controller extends BaseController
 
     public function show()
     {
-        $graduations = graduation::all();
+        $graduations = graduation::where('id',1)->first();
+        dd($graduations);
         return view('welcome', ['graduations' => $graduations]);
     }
 }

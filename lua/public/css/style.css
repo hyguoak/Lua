@@ -18,3 +18,15 @@ a{
     background-color: var(--bs-blue-principal);
     color: var(--bs-white);
 }
+
+.box{
+    border: 2px solid var(--bs-text);
+    border-radius: 10px;
+}
+
+.btn-trilhas{
+    background-color: var(--bs-yellow-principal);
+    color: var(--bs-white);
+    text-decoration: none;
+    border-radius: 5px;
+}

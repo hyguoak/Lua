@@ -1,58 +1,57 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>LUA</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ asset('bootstrap/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    </head>
-
-    <body class="antialiased">
-        <nav class="navbar navbar-expand-md navbar-dark bg-second">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Lua</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Trilhas</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="{{asset('images/header.svg')}}"> 
-              <div class="container">
-                <div class="carousel-caption text-center">
-                  <h1>Sistemas e Mídias Digitais</h1>
+<x-guest-layout>
+    <nav class="navbar navbar-expand-md navbar-dark bg-second">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Lua</a>
+            <div class="d-flex">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Trilhas</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-          <main class="mw-container">
-            <h2>Sobre o curso</h2>
-            <p>O curso tem a finalidade de formar bacharéis com conhecimentos especializados em duas grandes áreas principais: Sistemas Multimídia e Mídias Digitais. <br>
-                Desta forma, pretende-se contribuir para o desenvolvimento, no médio prazo, de novos perfis profissionais que possam sustentar o desenvolvimento de um polo regional tecnológico no estado do Ceará, fomentando e viabilizando atividades produtivas nas áreas de produção de mídias digitais e desenvolvimento de sistemas multimídia, como sistemas web e para dispositivos móveis, jogos digitais e animações gráficas.</p>
-            <h5>Endereço:</h5>
-            <p>  R. Pernambuco, 3182-3216 - Demócrito Rocha, Fortaleza - CE, 60440-140</p>
-            <h5> Duração do curso:</h5>
-            <p>9 semestres </p>
-            <div class="">
+        </div>
+    </nav>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ asset('images/header.svg') }}">
+            <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1>Sistemas e Mídias Digitais</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="mw-container ms-auto me-auto">
+        <div class="d-flex mw-container box mt-3 mb-3 p-2 align-items-center">
+            <div class="col-7">
+                <h2>Sobre o curso</h2>
+                <p>O curso tem a finalidade de formar bacharéis com conhecimentos especializados em duas grandes áreas
+                    principais: Sistemas Multimídia e Mídias Digitais. <br>
+                    Desta forma, pretende-se contribuir para o desenvolvimento, no médio prazo, de novos perfis
+                    profissionais que possam sustentar o desenvolvimento de um polo regional tecnológico no estado do
+                    Ceará,
+                    fomentando e viabilizando atividades produtivas nas áreas de produção de mídias digitais e
+                    desenvolvimento de sistemas multimídia, como sistemas web e para dispositivos móveis, jogos digitais
+                    e
+                    animações gráficas.</p>
+                <div class="d-flex">
+                    <div class="d-flex col-7 flex-column">
+                        <h5>Endereço:</h5>
+                        <p> R. Pernambuco, 3182-3216 - Demócrito Rocha, Fortaleza - CE, 60440-140</p>
+                    </div>
+                    <div class="d-flex col-5 flex-column">
+                        <h5> Duração do curso:</h5>
+                        <p>{{ $graduations->period }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex col-5 justify-content-center">
                 <div id="carouselExampleIndicators-desk" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators-desk" data-bs-slide-to="0"
@@ -82,48 +81,66 @@
                                 alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-desk"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselExampleIndicators-desk" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-desk"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselExampleIndicators-desk" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden"></span>
                     </button>
                 </div>
             </div>
-          </main>
+        </div>
 
-          <section class="bg-second text-center mw-container">
+    </main>
+
+    <section class="bg-second">
+        <div class="text-center mw-container ms-auto me-auto">
             <h2>Estrutura Curricular:</h2>
             <h4>1º, 2º e 3º Semestre:</h4>
-            <p>Até o 3º semestre o estudante deve se matriuclar nas disciplinas obrigatórias referente aos seus semestres específicos.</p>
-            <p>OBS: A partir do 2º semestre o estudante tem a liberdade de escolher optativas para preencher o currículo.</p>
+            <p>Até o 3º semestre o estudante deve se matriuclar nas disciplinas obrigatórias referente aos seus
+                semestres
+                específicos.</p>
+            <p>OBS: A partir do 2º semestre o estudante tem a liberdade de escolher optativas para preencher o
+                currículo.
+            </p>
 
             <h4>4º Semestre:</h4>
-            <p>No 4º semestre, o aluno deve escolher entre disciplinas eletivas, para preencher o currículo, além de cursar algumas obrigatórias.</p>
+            <p>No 4º semestre, o aluno deve escolher entre disciplinas eletivas, para preencher o currículo, além de
+                cursar
+                algumas obrigatórias.</p>
             <p>4º Semestre: No mínimo 4 Eletivas</p>
 
             <h4>5º Semestre:</h4>
-            <p>A partir do 5º semestre, o aluno deve escolher entre disciplinas eletivas, para preencher o currículo, além de cursar algumas disciplinas eletivas.</p>
+            <p>A partir do 5º semestre, o aluno deve escolher entre disciplinas eletivas, para preencher o currículo,
+                além
+                de cursar algumas disciplinas eletivas.</p>
             <p>5º Semestre: No mínimo 3 Eletivas + 2 Optativas</p>
 
             <h4>O que são disciplinas Obrigatórias?</h4>
-            <p>O curso de SMD é formado por duas grandes áreas, Sistemas Multimídias e Mídias Digitais. As disciplinas obrigatórias são a base curricular dessas áreas.</p>
-            <p>Você Deve cursá-las ao longo de todas as graduações, algumas delas são pré-requisito para outras disciplinas.</p>
+            <p>O curso de SMD é formado por duas grandes áreas, Sistemas Multimídias e Mídias Digitais. As disciplinas
+                obrigatórias são a base curricular dessas áreas.</p>
+            <p>Você Deve cursá-las ao longo de todas as graduações, algumas delas são pré-requisito para outras
+                disciplinas.
+            </p>
 
             <h4>O que são disciplinas Eletivas?</h4>
-            <p>As disciplinas eletivas surgem para complementar o perfil profissional, elas são específicas de cada área.</p>
+            <p>As disciplinas eletivas surgem para complementar o perfil profissional, elas são específicas de cada
+                área.
+            </p>
             <p>É permitido misturar as disciplinas para seguir diversas áreas.</p>
 
             <h4>O que são disciplinas Optativas?</h4>
-            <p>As disciplinas optativas, são não-obrigatórias, podem ser ofertadas dentro do curso de SMD, fazendo parte do sistema de TRILHAS. </p>
+            <p>As disciplinas optativas, são não-obrigatórias, podem ser ofertadas dentro do curso de SMD, fazendo parte
+                do
+                sistema de TRILHAS. </p>
             <p>Você pode procurar disciplinas optativas em outros cursos para enriquecer seu currículo.</p>
-            <p>Geralmente a flexibilização do curso permite a matrícula em optativas a partir do 2º semestre, mas é recomendado que seja feita a partir do 5º semestre.</p>
-            <a href="{{route('trilhas.show')}}">Clique e confira as TRILHAS acadêmicas</a>
-          </section>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</html>
+            <p>Geralmente a flexibilização do curso permite a matrícula em optativas a partir do 2º semestre, mas é
+                recomendado que seja feita a partir do 5º semestre.</p>
+            <a class="btn-trilhas p-2" href="{{ route('trilhas.show') }}">Clique e confira as TRILHAS acadêmicas</a>
+        </div>
+    </section>
+</x-guest-layout>
