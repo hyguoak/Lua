@@ -1,7 +1,7 @@
 <x-guest-layout>
     <nav class="navbar navbar-expand-md navbar-dark bg-second">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Lua</a>
+            <a class="navbar-brand" href="#">Choice</a>
             <div class="d-flex">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,6 +49,40 @@
                         <h5> Duração do curso:</h5>
                         <p>{{ $graduations->period }}</p>
                     </div>
+                    
+                </div>
+                <div class="d-flex flex-column">
+                    <h5>Notas de Corte</h5>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">2022</th>
+                        <th scope="col">2021</th>
+                        <th scope="col">2020</th>
+                        <th scope="col">2019</th>
+                        <th scope="col">2018</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Integral</th>
+                        <td>694,02</td>
+                        <td>694,88</td>
+                        <td>704,76</td>
+                        <td>721,12</td>
+                        <td>700,50</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Noturno</th>
+                        <td>681,72</td>
+                        <td>681,48</td>
+                        <td>683,32</td>
+                        <td>703,56</td>
+                        <td>678,32</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
             </div>
             <div class="d-flex col-5 justify-content-center">
@@ -96,11 +130,10 @@
         </div>
 
     </main>
-
     <section class="bg-second">
-        <div class="text-center mw-container ms-auto me-auto">
+        <div class="text-center mw-container ms-auto me-auto p-3">
             <h2>Estrutura Curricular:</h2>
-            <h4>1º, 2º e 3º Semestre:</h4>
+            <h4 class="d-flex off_titulo">1º, 2º e 3º Semestre:</h4>
             <p>Até o 3º semestre o estudante deve se matriuclar nas disciplinas obrigatórias referente aos seus
                 semestres
                 específicos.</p>
@@ -143,4 +176,8 @@
             <a class="btn-trilhas p-2" href="{{ route('trilhas.show') }}">Clique e confira as TRILHAS acadêmicas</a>
         </div>
     </section>
+    <footer class="bg-footer p-2 text-center">
+        <p class="m-0">&copy;Todos os Direitos Reservados</p>
+    </footer>
+
 </x-guest-layout>

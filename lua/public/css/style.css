@@ -30,3 +30,14 @@ a{
     text-decoration: none;
     border-radius: 5px;
 }
+
+.off_titulo{
+    border-bottom: 1px solid var(--bs-yellow-principal);
+    max-width: 100%;
+}
+
+.bg-footer{
+    background-color: var(--bs-bue-secundario);
+    color:var(--bs-text);
+    font-family: 'Noto Sans', sans-serif;
+}

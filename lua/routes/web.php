@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrilhasController;
 use Illuminate\Support\Facades\Route;
-use App\Models\graduation;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +17,7 @@ use App\Models\graduation;
 |
 */
 
-Route::get('/', function () {
-    $graduations = graduation::where('id',1)->first();
-
-    return view('welcome', ['graduations' => $graduations]);
-    
-});
+Route::get('/', [HomeController::class, 'show'])->name('trilhas.show');
 
 Route::get('/trlhas', [TrilhasController::class,'show'])->name('trilhas.show');
 Route::get('/trilhas/sistemas', [TrilhasController::class, 'sistemas'])->name('trilhas.sistemas');
