@@ -19,7 +19,7 @@
     </nav>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ asset('images/header.svg') }}">
+            <img src="{{ asset('images/capa.svg') }}">
             <div class="container">
                 <div class="carousel-caption text-center">
                     <h1>Sistemas e Mídias Digitais</h1>
@@ -99,19 +99,19 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('images/cursos/smd/2016-10-03.jpg') }}" class="d-block w-100"
+                            <img src="{{ asset('images/cursos/smd/2016-10-03.png') }}" 
                                 alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/cursos/smd/2017-01-13.jpg') }}" class="d-block w-100"
+                            <img src="{{ asset('images/cursos/smd/2017-01-13.png') }}" 
                                 alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/cursos/smd/2017-11-06.jpg') }}" class="d-block w-100"
+                            <img src="{{ asset('images/cursos/smd/2017-11-06.png') }}" 
                                 alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/cursos/smd/2018-06-17.jpg') }}" class="d-block w-100"
+                            <img src="{{ asset('images/cursos/smd/2018-06-17.png') }}" 
                                 alt="...">
                         </div>
                     </div>

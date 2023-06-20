@@ -54,33 +54,45 @@
             formação na área.
             As áreas são:
         </p>
-        <div class="bg-second p-3 m-3">
-            <a href="{{ route('trilhas.animacao') }}">
+        <div class="bg-second p-3 m-3 rounded">
+            <a class="d-flex justify-content-between align-items-center" href="{{ route('trilhas.animacao') }}">
+                <div class="col-7">
                 <h3>Animação e audiovisual</h3>
                 <p>Busca explorar os recursos tecnológicos, as ferramentas e os conhecimentos operacionais aplicados às
                     áreas de produção artística, cultural e multimídia, para uso nas produções estudantis.
                 </p>
+            </div>
+            <img class="col-5 sz-200" src="{{ asset('images/icones/animacao.svg') }}" alt="">
             </a>
         </div>
-        <div class="bg-second p-3 m-3">
-            <a href="{{ route('trilhas.design') }}">
+        <div class="bg-second p-3 m-3 rounded">
+            <a class="d-flex justify-content-between align-items-center" href="{{ route('trilhas.design') }}">
+               <div class="col-7">
                 <h3>Design Digital Interativo</h3>
                 <p>Busca estimular uma visão crítica do processo de design, e de suas funções (prática, estética e simbólica). Abrange a interatividade no design digital, e questões relativas a experiência do usuário. 
                 </p>
+            </div>
+            <img class="col-5 sz-200" src="{{ asset('images/icones/design.svg') }}" alt="">
             </a>
         </div>
-        <div class="bg-second p-3 m-3">
-            <a href="{{ route('trilhas.jogos') }}">
+        <div class="bg-second p-3 m-3 rounded">
+            <a class="d-flex justify-content-between align-items-center" href="{{ route('trilhas.jogos') }}">
+                <div class="col-7">
                 <h3>Jogos Digitais</h3>
                 <p>Os componentes curriculares da trilha oferecem múltiplas perspectivas sobre a interatividade em multimídia digital, contemplando aspectos teóricos e práticos no desenvolvimento de jogos.
                 </p>
+                </div>
+                <img class="col-5 sz-200" src="{{ asset('images/icones/jogos.svg') }}" alt="">
             </a>
         </div>
-        <div class="bg-second p-3 m-3">
-            <a href="{{ route('trilhas.sistemas') }}">
+        <div class="bg-second p-3 m-3 rounded">
+            <a class= "d-flex justify-content-between align-items-center" href="{{ route('trilhas.sistemas') }}">
+                <div class="col-7">
                 <h3>Sistemas Multimídia</h3>
-                <p>Busca desenvolver nos discentes a capacidade de representar as informações nestes sistemas de forma múltipla, como por meio de imagens, vídeos e linguagem sonora, sejam elas integradas ou isoladas em mídias interativas. 
+                <p >Busca desenvolver nos discentes a capacidade de representar as informações nestes sistemas de forma múltipla, como por meio de imagens, vídeos e linguagem sonora, sejam elas integradas ou isoladas em mídias interativas. 
                 </p>
+                </div>
+                <img class="col-5 sz-200" src="{{ asset('images/icones/prog.svg') }}" alt="">
             </a>
         </div>
     </main>
