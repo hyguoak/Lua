@@ -45,3 +45,19 @@ a{
     color:var(--bs-text);
     font-family: 'Noto Sans', sans-serif;
 }
+
+.btn-trilha{
+    color: var(--bs-white);
+    font-family: 'Noto Sans', sans-serif;
+    border: 1px solid var(--bs-blue-principal);
+    background-color: var(--bs-blue-principal);
+    padding: 1em;
+    transition: .4s;
+    border-radius: 8px;
+}
+
+.btn-trilha:hover{
+    background-color: var(--bs-white);
+    border: 1px solid var(--bs-blue-principal);
+    color: var(--bs-blue-principal);
+}

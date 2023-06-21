@@ -31,22 +31,14 @@
         <div class="d-flex mw-container box mt-3 mb-3 p-2 align-items-center">
             <div class="col-7">
                 <h2>Sobre o curso</h2>
-                <p>O curso tem a finalidade de formar bacharéis com conhecimentos especializados em duas grandes áreas
-                    principais: Sistemas Multimídia e Mídias Digitais. <br>
-                    Desta forma, pretende-se contribuir para o desenvolvimento, no médio prazo, de novos perfis
-                    profissionais que possam sustentar o desenvolvimento de um polo regional tecnológico no estado do
-                    Ceará,
-                    fomentando e viabilizando atividades produtivas nas áreas de produção de mídias digitais e
-                    desenvolvimento de sistemas multimídia, como sistemas web e para dispositivos móveis, jogos digitais
-                    e
-                    animações gráficas.</p>
+                <p><b>Objetivo:</b> Capacitar os estudantes em diferentes meios de comunicação, usando recursos multimidiáticos na produção de projetos práticos.</p>
             </div>
         </div>
 
     </main>
 
     <section class="mw-container ms-auto me-auto">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordionExample mb-3">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -217,4 +209,7 @@
               </div>
           </div>
     </section>
+    <footer class="bg-footer p-2 text-center">
+      <p class="m-0">&copy;Todos os Direitos Reservados</p>
+  </footer>
 </x-guest-layout>
